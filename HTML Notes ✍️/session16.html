@@ -1,0 +1,168 @@
+Jump Control statements
+=====================================
+1) break
+2) continue
+3) return
+
+break
+=================================
+. Whenever break statement is executed control comes out of the loop.
+. We should use this statement only in loop control statements.
+. ex:
+======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	   for(i=1;i<=10;i++)
+	   {
+		   if(i==5)
+		      break;
+		   document.writeln(i);
+	   }
+	   document.writeln("After for loop");
+	</script>
+   </font>
+  <body>
+</html>
+
+continue
+==============================
+. Whenever continue statement is executed control goes back to loop
+. We should use this statement only in loop control statements.
+. ex:
+======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	   for(i=1;i<=10;i++)
+	   {
+		   if(i==5)
+		      continue;
+		   document.writeln(i);
+	   }
+		document.writeln("<Br>");
+	   for(i=1;i<=10;i++)
+	   {
+		   //&& and (both conditions are true then result is true)
+		   //|| or  (if any one condition is true then result is true)
+		   if(i==2 || i==6 || i==8)
+		      continue;
+		   document.writeln(i);
+	   }
+	</script>
+   </font>
+  <body>
+</html>
+
+ex-2: WAP to display even numbers from 1 to 100
+============================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	   for(var i=1;i<=100;i++)
+	   {
+		   if(i%2 != 0)
+		       continue;
+		   document.writeln(i);
+	   }
+	</script>
+   </font>
+  <body>
+</html>
+
+Functions
+=============================================================================
+. Function is a block of a code that performs specific task.
+. Functions are also called "Methods" or "Procedures".
+. In java script functions are declared with a keyword called "function".
+. syntax:
+----------
+   function functionname(arguments/parameters)
+   {
+     ....body/definition of 
+     ....function
+   }
+
+ex:
+======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	   function welcome() //called function
+	   {
+		   document.writeln("Hello, Welcome to JS functions");
+	   }
+	   welcome() //calling function
+	</script>
+   </font>
+  <body>
+</html>
+
+1) We may have any number of functions
+2) one function can call another function
+3) one function can call itself is called "Recursion".
+4) we may not define as a sequence called in our program.
+
+. ex:
+=======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	 function arithmetic()
+	 {
+		  add();
+		  sub();
+	 }
+	 function add()
+	 {
+		 a=parseInt(prompt("Enter a: "))
+		 b=parseInt(prompt("Enter b: "))
+		 document.writeln(a+b);
+	 }
+	function sub()
+	 {
+		 a=parseInt(prompt("Enter a: "))
+		 b=parseInt(prompt("Enter b: "))
+		 document.writeln(a-b);
+	 }
+	 arithmetic()
+	</script>
+   </font>
+  <body>
+</html>
+
+. area of program using functions
+. average of 5 numbers
+
+. Functions are divided into two types
+  1) System defined functions
+  2) User defined functions
+
+. If the body of the function is given by the system is called system defined function
+  ex: writeln(), prompt(), alert(), confirm(), parseInt()
+
+. If the body of the function is given by the user is called User defined function
+  ex:  arithmetic(), add(), sub(), welcome()
+
+
+ 
