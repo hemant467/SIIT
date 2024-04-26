@@ -1,0 +1,239 @@
+String object
+========================================================
+. String is a collection of characters(i.e alphabets,digits,spaces and special symbols) 
+. String can be declared in two ways
+  1) using single quotes ex: a='abcde'
+  2) using double quotes ex: a="abcde"
+. ex:
+========
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a='abcde';
+	   document.writeln(a);
+	   var b="abcde";
+	   document.writeln(b);
+
+	   var c="abcd 1234 #$%^";
+	   document.writeln(c);
+
+	   var d=new String("abcde");
+	   document.writeln(d);
+	</script>
+   </font>
+  <body>
+</html>
+
+String handling functions
+===============================================================
+1)length: returns number of characters in a given string
+-----
+ex:
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="abcdef";
+	   document.writeln(a.length);
+	</script>
+   </font>
+  <body>
+</html>
+
+2) toUpperCase(): converts string to upper case
+3) toLowerCase(): converts string to lower case
+=======================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="abcdef";
+	   document.writeln(a.toUpperCase());
+	   document.writeln(a.toLowerCase());
+	</script>
+   </font>
+  <body>
+</html>
+
+4) public char charAt(int index): returns character at that index
+5) public int codePointAt(int index): returns ASCII code of that character
+==============================================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="abcdef";
+	   document.writeln(a.charAt(3));
+	    document.writeln(a.codePointAt(3));
+	</script>
+   </font>
+  <body>
+</html>
+
+6) slice(startindex,endindex)
+=======================================================================
+. slicing means extracting substring from main string
+. returns sub string from startindex to endindex-1
+. ex:
+========
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="abcdefghij";
+	   document.writeln(a.slice(3,7));
+	   document.writeln(a.slice(4,9));
+	</script>
+   </font>
+  <body>
+</html>
+
+7)substring(startindex,endindex):returns substring from startindex to endindex-1
+===============================================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="abcdefghij";
+	   document.writeln(a.substring(3,7));
+	   document.writeln(a.substring(4,9));
+	</script>
+   </font>
+  <body>
+</html>
+
+8) replace(oldstring,newstring) : replaces old string with new string
+9) replaceAll(oldstring,newstring)
+==========================================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="abcdabcdabcdabcde";
+	   document.writeln(a.replace("cd","xyz"),"<br>");
+	   document.writeln(a.replaceAll("cd","xyz"));
+	</script>
+   </font>
+  <body>
+</html>
+
+10)concat(string): Concatenation is used to append one string to another string
+==============================================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	   var a="Hello";
+	   
+	   var b=a.concat(" How are you");
+	   document.writeln(b,"<br>");
+
+	   var c=a.concat(" Sharadha"," welcome to JS strings");
+	   document.writeln(c);
+
+	   var d="abcde";
+	   var e="xyz";
+	   //var f=d.concat(e);
+	   var f = d + e;
+	   document.writeln(f);
+	</script>
+   </font>
+  <body>
+</html>
+
+11) trim():  removes unnecessary spaces at both ends
+12) trimStart(): removes unnecessary spaces at the begining
+13) trimEnd(): removes unnecessary spaces at the end
+=======================================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	  var a="hello";
+	  var b="   hello    ";
+	  document.writeln(a == b,"<br>");
+	  document.writeln(a == b.trim() ,"<br>" );
+
+	  var c="   hello";
+	  document.writeln(a == c.trimStart())
+
+	  var d="hello    ";
+	  document.writeln(a == d.trimEnd())
+	</script>
+   </font>
+  <body>
+</html>
+
+14) split(string): divides a string into multiple strings
+=======================================================================
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	  a="red,green,blue,orange";
+	  document.writeln(a,"<br>");
+	  
+	  b=a.split(",");
+	  for (i=0;i<b.length;i++)
+	  {
+		  document.writeln(b[i],"<Br>");
+	  }
+	  b=a.split(",",2);
+	  document.writeln(b);
+	</script>
+   </font>
+  <body>
+</html>
+
+Date object
+====================================================
+. It is used to display system date and time
+. syntax: var a=new Date()
+. ex:
+=======
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	  var a=new Date();
+	  document.writeln(a,"<br>");
+	  document.writeln(a.getDate(),"<br>");
+	  document.writeln(a.getMonth()+1,"<br>");
+	  document.writeln(a.getYear()+1900,"<br>");
+	  document.writeln(a.getHours(),"<br>");
+	  document.writeln(a.getMinutes(),"<br>");
+	  document.writeln(a.getSeconds(),"<br>");
+	  document.writeln(a.getTime(),"<br>");
+	</script>
+   </font>
+  <body>
+</html>
+
+.getTime(): returns EPOCH/UNIZ standard value. 
+EPOCH value: number of milli seconds from 1970 January 1st to till date
+. ex-2:
+=========
+<html>
+ <body>
+    <font size=7>
+     <script>      
+	 var a=new Date();
+	 var start=a.getTime();
+	 for(i=1;i<=100000;i++)
+	   document.writeln(i);
+	 var b=new Date();
+	 var end=b.getTime();
+	 document.writeln("Time Take=",end-start);
+	</script>
+   </font>
+  <body>
+</html>
+
+Math object
+======================
+document object
+======================
+
+
+ 
