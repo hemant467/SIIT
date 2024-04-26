@@ -1,0 +1,172 @@
+font properties
+==================================
+font-size:piexels/em format (1em = 16px (standard font size))
+font-weight: bold/bolder
+font-style : italic/arial.....
+ex:
+=====
+<html>
+  <head>
+    <style>
+	  h1
+	  {
+	    font-size:5em;
+		font-weight:bolder;
+		font-style:italic;
+	  }
+	</style>
+  </head>
+  <body>
+    <h1>Red color</h1>
+  <body>
+</html>
+
+text properties
+============================================
+color: text color
+text-decoration: none/underline/overline/line-through
+text-transform : uppercase/lowercase
+letter-spacing : gap between two letters
+word-spacing   : gap between two words
+indentation    : left margin
+text-shadow    : color x-pos y-pos
+
+ex:
+======
+<html>
+  <head>
+    <style>
+	  h1
+	  {
+	    font-size:5em;
+		color:red;
+		text-align:left;
+		text-decoration:underline;
+		letter-spacing:5px;
+		word-spacing:10px;
+		text-indent:200px;
+		text-shadow:green 10px 10px
+	  }
+	</style>
+  </head>
+  <body>
+    <h1>Red color</h1>
+  <body>
+</html>
+
+margin properties
+===============================
+margin: px
+margin-left:px
+margin-right:px
+margin-top:
+margin-bottom:
+
+ex:
+=====
+<html>
+  <head>
+    <style>
+	  a 
+	  {
+		font-size:30px;
+		text-decoration:none;	
+		margin:20px;
+	  }
+	</style>
+  </head>
+  <body>
+	<a href="http://www.siit.com">SIIT</a>
+	<a href="http://www.google.com">Google</a>
+  <body>
+</html>
+
+
+Border properties
+========================
+border: size color style(solid/dotted/dashed/outset/double)
+border-left:
+border-right:
+border-bottom:
+border-top:
+
+ex:
+=====
+<html>
+  <head>
+    <style>
+	  img 
+	  {
+		border:15px red double;
+		border-bottom:20px green solid;
+		border-right:10px blue dashed;
+	  }
+	</style>
+  </head>
+  <body>
+    <img src="image2.jpg" width=200 height=200 />
+  <body>
+</html>
+
+
+Style ID's and Style classes
+==============================================
+. Style Id's and style classes are used to create user defined selectors.
+. Style ID starts with '#' symbol
+. Style class starts with '.' symbol
+. we can assign more than one value to style class
+. ex:
+======
+<html>
+  <head>
+    <style>
+	  #solid 
+	  {
+	    border:15px red solid;
+	  }
+	  .dotted
+	  {
+	   border:15px green dotted;
+	  }
+	  .center
+	  {
+	    text-align:center;
+	  }
+	</style>
+  </head>
+  <body>
+	<h1 id="solid">Hello</h1>
+	<h1 class="dotted">Hi</h1>
+	<h1 class="dotted center ">How are you</h1>
+  <body>
+</html>
+
+
+ex-2:
+===============
+<html>
+  <head>
+    <style>
+	  .underline
+	  {
+	    text-decoration:underline;
+	  }
+	  h1.red
+	  {
+	    color:red;
+	  }
+	  h2#blue
+	  {
+	   color:blue;
+	   font-size:50px;
+	  }
+	</style>
+  </head>
+  <body>
+	<h1 class="underline red">Heading1</h1>
+	<h2 class="underline" id="blue">Heading2</h2>
+  <body>
+</html>
+
+Layers
+===============
