@@ -1,0 +1,195 @@
+Control statements
+==================================================
+1) Sequential control statements 
+2) Conditional control statements
+3) Loop control statements
+4) Jump control statements
+
+Conditional control statements
+======================================
+1) if
+2) if-else
+3) else if ladder
+
+if
+====
+syntax:
+	 if(condition)
+	 {
+	   .....
+	   .....True block
+	   .....statements
+	 }
+
+. WAP for discount?
+  if amount >= 500 then 10% discount
+ ==============================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var amount = parseInt(prompt("Enter amount: "));
+		var discount = 0;
+		if(amount >= 500)
+		{
+			discount = 0.1;
+		}
+		var total = amount - amount*discount;
+		document.writeln("<h1>",total);
+	</script>
+   </font>
+  <body>
+</html>
+
+. WAP for bonus
+. if salary>=30000 then 30% bonus
+================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var salary = parseInt(prompt("Enter salary: "));
+		var bonus=0;
+		if(salary >= 3000)
+		{
+			bonus=0.3;
+		}
+		var total = salary + salary*bonus;
+		document.writeln(total);
+	</script>
+   </font>
+  <body>
+</html>
+
+if-else
+====================================================
+syntax:
+========
+	  if(condition)
+	  {
+	    .....
+	    .....
+	    .....
+	  }
+	  else
+	  {
+	    ....
+	    ....
+	  }
+. WAP to find given number is +ve or -ve
+========================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var n= parseInt(prompt("Enter n: "));
+		if(n>0)
+		   document.writeln("+ve");
+		else
+		   document.writeln("-ve");
+	</script>
+   </font>
+  <body>
+</html>
+
+2) WAP to find greatest of two numbers
+=============================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var a=parseInt(prompt("enter a: "))
+		var b=parseInt(prompt("enter b: "))
+		if (a>b)
+		  document.writeln("A is greater");
+		else
+		  document.writeln("B is greater");
+	</script>
+   </font>
+  <body>
+</html>
+
+3) WAP to check given number is even or odd
+4) WAP to check given year is leap year or not -- ????done
+
+else if ladder
+============================================
+syntax:
+----------
+if(condition)
+{}
+else if(condition)
+{}
+else if(condition)
+{}
+...
+else
+{}
+
+1)WAP for week days?
+  1 - Sunday
+  2 - Monday
+  3 - Tuesday
+-------------------------------------
+ <html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var n=parseInt(prompt("Enter n: "))
+		if(n == 1)
+		  document.writeln("Sunday");
+		else if(n==2)
+		  document.writeln("Monday");
+		else if(n==3)
+		  document.writeln("Tuesday");
+		else
+		  document.writeln("Wrong choice, enter 1-3 only");
+	</script>
+   </font>
+  <body>
+</html>
+
+2) WAP to find greatest of 5 numbers?
+=======================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var a=parseInt(prompt("Enter a:"));
+		var b=parseInt(prompt("Enter b:"));
+		var c=parseInt(prompt("Enter c:"));
+		var d=parseInt(prompt("Enter d:"));
+		var e=parseInt(prompt("Enter e:"));
+		if(a>b && a>c && a>d && a>e)
+			document.writeln("A is greater");
+		else if(b>c && b>d && b>e)
+			document.writeln("B is greater");
+		else if (c>d && c>e)
+		    document.writeln("C is greater");
+		else if(d>e)
+			document.writeln("D is greater");
+		else
+			document.writeln("E is greater");
+	</script>
+   </font>
+  <body>
+</html>
+
