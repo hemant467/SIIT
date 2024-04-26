@@ -1,0 +1,183 @@
+Layers
+=============================================
+. To work with layers we have to use <div> or <span>
+. ex-1:
+============
+<html>
+  <head>
+    <style>
+	</style>
+  </head>
+  <body>
+    <div style="background-color:red;"><!-- layer1 -->
+	  <h1>Welcome to CSS Layers</h1>
+	  <img src="image2.jpg" width=300 height=300 />
+	</div>
+	<div style="background-color:magenta;"><!-- layer2 -->
+	   <h2>Layer2</h2>
+	   <a href="http://www.google.com">Google</a>
+	</div>
+  <body>
+</html>
+
+Positioning
+================================
+1) Abolute positioning
+2) Relative positioning
+3) Overlapping
+
+Absoulte positioning
+==============================
+attributes
+============
+position: absolute
+top:
+bottom: 
+left:
+right:
+width:
+height:
+
+ex:
+======
+<html>
+  <head>
+    <style>
+	  #div1
+	  {
+	    position:absolute;
+		top:100px;
+		left:100px;
+		width:300px;height:300px;
+		background-color:green;
+	  }
+	  #div2
+	  {
+	    position:absolute;
+		top:100px;
+		left:500px;
+		width:300px;
+		height:300px;
+		background-color:cyan;
+	  }
+	</style>
+  </head>
+  <body>
+       <div id="div1"><!-- layer1 -->
+	  <h1>Welcome to CSS Layers</h1>
+	  <img src="image2.jpg" width=200 height=200 />
+	</div>
+	<div id="div2"><!-- layer2 -->
+	   <h2>Layer2</h2>
+	   <a href="http://www.google.com">Google</a>
+	</div>
+  <body>
+</html>
+
+ex-2:
+===================================================
+<html>
+  <head>
+    <style>
+	  #header
+	  {
+	    position:absolute;top:0px;left:0px;width:100%;height:100px;
+		background-image:url("image2.jpg");
+	  }
+	  h1.header
+	  {
+	    text-align:center; font-size:50px;color:#330033;
+	  }
+	  #links1
+	  {
+	    position:absolute;top:110px;left:0px;width:100%;height:80px;
+		background-image:url("image3.jpg");text-align:center;
+	  }
+	  a.links1
+	  {
+	    font-size:40px;text-decoration:none;margin:20px;
+	  }
+	  #links2
+	  {
+	   position:absolute;top:200px;width:200px;height:420px;
+	   background-color:pink;
+	  }
+	  #welcome
+	  {
+	    position:absolute;top:200px;left:210px;width:800px;height:420px;
+		background-color:blue;
+	  }
+	  #footer
+	  {
+	   position:absolute;bottom:0px;left:0px;width:100%;
+	   font-size:25px;color:red;text-align:center;background-color:black;
+	  }
+	</style>
+  </head>
+  <body>
+    <div id="header">
+	  <h1 class="header">Welcome to SIIT </h1>
+	</div>
+	<div id="links1">
+	   <a href="#" class="links1">Home</a>
+	   <a href="contact.html" class="links1">ContactUs</a>
+	   <a href="about.html" class="links1">AboutUs</a>
+	   <a href="login.html" class="links1">Login</a>
+	</div>
+	<div id="links2">
+	   <a href="#" class="links1">Home</a><br>
+	   <a href="contact.html" class="links1">ContactUs</a><br>
+	   <a href="about.html" class="links1">AboutUs</a><br>
+	   <a href="login.html" class="links1">Login</a>
+	</div>
+	<div id="welcome">
+	  <img src="image1.jpg" width=200 height=200/><br>
+	  <h1>Welcome to My Web Page</h1>
+	</div>
+	<div id="footer">
+	   CopyRight@2023, All Rights Reserved
+	</div>
+  <body>
+</html>
+
+2)Relative positioning
+================================================
+<html>
+  <head>
+    <style>
+	   #header
+	   {
+	    position:absolute;top:100px;left:100px;
+	   }
+	   #inner
+	   {
+	     position:relative;top:-50px;left:50px;
+	   }
+	</style>
+  </head>
+  <body>
+    <div id="header">
+	   <img src="image1.jpg" width=100 height=100 />
+	   <div id="inner">
+	     <img src="image2.jpg" width=100 height=100 />
+	   </div>
+	</div>
+  <body>
+</html>
+
+Overlapping
+=============================================
+<html>
+  <head>
+    <style>
+	   h1 {font-size:30px;color:red;visibility:visible;}
+	   img {position:absolute;top:0px;left:0px;z-index:-1;visibility:visible;}
+	</style>
+  </head>
+  <body>
+  <h1>Last example for style sheets</h1>
+    <img src="image1.jpg" width=200 height=200 />
+	
+  <body>
+</html>
+
