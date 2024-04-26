@@ -1,0 +1,341 @@
+Forms
+=============================
+. <form>
+  -------
+  . used to create forms
+  . sub tag of <body> tag
+  . syntax: <form name=".." action="..." method="get/post" >
+
+Form fields
+===========================
+1) Textfield
+==============
+. We can enter only one line of text
+. attributes
+=============
+   type = text
+   name = 
+   id   =
+   value=
+   palceholder=
+   required 
+   Readonly
+   disabled
+
+. ex:
+======
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	  <label>Text Field</label>
+	  <input type="text" name="t1" id="t1" size="30" maxlength="15" placeholder="Enter some text" required READONLY DISABLED/>
+	  <br />
+	  <input type="Submit" value="Submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Passwordfield
+================================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	  <label>Password Field</label>
+	  <input type="password" name="t1" id="t1" size="30" maxlength="15" placeholder="Enter some text" required />
+	  <br />
+	  <input type="Submit" value="Submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Textarea
+====================================
+. used to enter multiple lines of text
+. ex:
+=========
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 TextArea:
+	 <textarea rows=10 cols=30>
+	   Welcome to HTML
+	 </textarea>
+	</form>
+	</h1>
+  <body>
+</html>
+
+Email field
+==================================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 EmailId : <input type="email" name="email" required placeholder="email"/> <br />
+	 <input type="submit" value="submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Date field
+=============================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	  Enter DOB: <input type="date" name="t1" id="t2" />
+	  <br />
+	  Month field: <input type="month" /><br />
+	  Time field : <input type="time" name="t2" /><br/>
+	 <input type="submit" value="submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Mobile number field
+=======================================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	  Mobile Number:<input type="text" pattern="[0-9]{10}" title="Please enter 10 digit mobile number"/><br> 
+	 Country Name: <input type="text" pattern="[a-z A-Z]+" />
+	 <br><input type="submit" value="submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Note
+========
+[0-9] : only one digit is allowed
+[0-9]+: only digits are allowed
+[0-9]{10}: exactly 10 digits
+[a-z]: only one lower case alphabet
+[a-z]+: lower case alphabets 
+[a-z A-Z]+: lower and upper case alphabets are allowed
+[a-z A-Z 0-9]+: alphanumerics
+
+Number field
+========================================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 Enter Your age: <input type="number" min="1" max="130" />
+	 <br><input type="submit" value="submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Checkbox
+=====================================
+. used to select multiple values
+. ex:
+========
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 Red:<input type="checkbox" name="t1" />
+	 Green: <input type="checkbox" name="t2" />
+	 Blue:<input type="checkbox" name="t3" />
+	 <br><input type="submit" value="submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Radio button
+==============================================
+. we can select only one item at a time
+. ex:
+==========
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 Red:<input type="radio" name="t1" checked/>
+	 Green: <input type="radio" name="t1" />
+	 Blue:<input type="radio" name="t1" />
+	 <br><input type="submit" value="submit" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Buttons
+==================================================
+Buttons are of 4 types
+1) Ordinary Button
+2) Submit Button
+3) Image Button
+4) Reset Button
+
+ex:
+=======
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	  Enter Name:<input type="text" name="t1" /><br>
+	  Enter Age :<input type="number" name="t2" /><br>
+	 <br>
+	 <input type="button" value="Ordinary Button" />
+	 <input type="submit" value="Submit Button" />
+	 <input type="image" src="image2.jpg" width=100 height=100 />
+	 <input type="reset" value="Reset" />
+	</form>
+	</h1>
+  <body>
+</html>
+
+Select box
+=========================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 <select name="s1" size=5 MULTIPLE>
+	   <option>C
+	   <option>C++
+	   <option>Java
+	   <option>Python
+	   <option>WebDesign
+	 </select>
+	  
+	 <input type="submit" value="Submit Button" />
+	 
+	</form>
+	</h1>
+  <body>
+</html>
+
+Combo box/Drop down box/Choice box
+=======================================
+<html>
+  <head>
+    <title>Forms </title>
+  </head>
+  <body>
+    <h1>
+    <form name="f1" action="http://www.google.com">
+	 <select name="s1">
+	   <option>C
+	   <option>C++
+	   <option>Java
+	   <option>Python
+	   <option>WebDesign
+	 </select>
+	  
+	 <input type="submit" value="Submit Button" />
+	 
+	</form>
+	</h1>
+  <body>
+</html>
+
+Login Page
+=========================
+<html>
+  <head>
+    <title>Login Page </title>
+  </head>
+  <body>
+    <center>
+    <h1>Welcome to SIIT<br />
+	<form name="f1" action="1.html" method="post">
+	<fieldset>
+	   <legend>LoginPage</legend>
+<fieldset> UserName: <input type="text" name="user" /><br /></fieldset>
+	   Password: <input type="password" name="pwd" /><br />
+	   <input type="submit" value="submit" />
+	   <input type="reset" value="reset" />
+	 </fieldset>
+	</form>
+	</h1>
+	</center>
+  <body>
+</html>
+
+LoginPage using tables
+============================================
+<html>
+  <head>
+    <title>Login Page </title>
+  </head>
+  
+  <body>
+    <table align="center" width=30% height=20% bgcolor="magenta" background="image2.jpg">
+	  <tr>
+	    <th colspan=2>Welcome to SIIT </th>
+	  </tr>
+	  <tr>
+	    <th>UserName</th>
+		<th><input type="text" name="t1" ></th>
+	  </tr>
+	  <tr>
+	    <th>Password</th>
+		<th><input type="password" name="pwd" /></th>
+	  </tr>
+	  <tr>
+	    <th><input type="submit" value="submit" /></th>
+		<th><input type="reset" value="reset" /></th>
+	  </tr>
+	</table>
+  <body>
+</html>
+
+Student Registration Page
+========================================
+1) welcome to Student
+2) Name : textfield
+3) UserName: textfield
+4) Password: passwordfield
+5) Emailid : email field
+6) mobilenumber: pattern
+7) Age : number field
+8) Address: Textarea
+9) Gender: Radio button
+10) one submit and reset button
