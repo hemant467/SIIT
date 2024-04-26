@@ -1,0 +1,224 @@
+factorial program
+--------------------------------------------
+<script>
+  var n=parseInt(prompt("enter n: "))
+  var fact=1;
+  for(var i=1;i<=n;i++)
+  {
+    fact = fact * i;
+  }
+  document.writeln(fact);
+</script>
+
+.Area of rectangle program using functions
+===============================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		function area()
+		{
+			var l=parseInt(prompt("Enter l: "));
+			var b=parseInt(prompt("Enter b: "));
+			var a=l*b;
+			document.writeln(a);
+		}
+		area();
+		area();
+		area();
+	</script>
+   </font>
+  <body>
+</html>
+
+.Average of 5 subjects
+==================================
+avg = (a+b+c+d+e)/5
+ex:
+=================================
+
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		function average()
+		{
+			var a=parseInt(prompt("Enter a"));
+			var b= parseInt(prompt("Enter b"));
+			var c=parseInt(prompt("Enter c"));
+			var d=parseInt(prompt("Enter d"));
+			var e=parseInt(prompt("Enter e"));
+			var avg = (a+b+c+d+e)/5;
+			document.writeln(avg);
+		}
+		average();
+	</script>
+   </font>
+  <body>
+</html>
+. WAP to find simple interest
+=================================
+si=p*t*r/100
+
+Argumentst(Parameters)
+=======================================================================
+.Values passing from calling function to called function are called arguments.
+.We can send any number of arguments but number of sending arguments must be equal to number of receiving arguments.
+.Sending arguments are said to be actual arguments/parameters
+.Receiving arguments are said to be formal arguments
+.actual and formal argument names may or may not be same
+.ex-1:
+========
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>       //formal arguments
+		function add(a,b)
+		{
+			document.writeln(a+b);
+		}
+		function sub(a,b)
+		{
+			document.writeln(a-b);
+		}
+		a=100
+		b=200
+		add(a,b) //actual arguments
+		sub(a,b)
+	</script>
+   </font>
+  <body>
+</html>
+
+ex-2: WAP to find area of rectangle(a=l*b)
+=============================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>       //formal arguments
+		function area(l,b)
+		{
+		  var a=l*b;
+		  document.writeln(a);
+		}	
+		l=parseInt(prompt("Enter l: "))
+		b=parseInt(prompt("Enter b: "))
+		area(l,b)
+	</script>
+   </font>
+  <body>
+</html>
+
+average 5 numbers
+simple interest using arguments
+
+Return type
+======================================
+. whenever return statement is executed contol returns to calling function
+. we can return only one value
+ ex:
+    return a;
+    return a+b;
+    return a,b;Xerror
+ex:
+====
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>       
+		function add(a,b)
+		{
+			var c=a+b;
+			return c;
+		}
+		function sub(a,b)
+		{
+			var c=a-b;
+			return c;
+		}
+
+		a=10
+		b=20
+		c=add(a,b)
+		document.writeln(c);
+
+		c=sub(a,b)
+		document.writeln(c);
+	</script>
+   </font>
+  <body>
+</html>
+
+. Average of 5 numbers
+=====================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>       
+		function average(a,b,c,d,e)
+		{
+			avg = (a+b+c+d+e)/5;
+			return avg;
+		}
+		avg = average(10,20,30,40,50);
+		document.writeln(avg);
+	</script>
+   </font>
+  <body>
+</html>
+
+(or)
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>       
+		function average(a,b,c,d,e)
+		{
+			avg = (a+b+c+d+e)/5;
+			return avg;
+		}
+		var a=parseInt(prompt("Enter a"));
+		var b= parseInt(prompt("Enter b"));
+		var c=parseInt(prompt("Enter c"));
+		var d=parseInt(prompt("Enter d"));
+		var e=parseInt(prompt("Enter e"));
+		avg = average(a,b,c,d,e);
+		document.writeln(avg);
+	</script>
+   </font>
+  <body>
+</html>
+
+Objects in java script
+==============================
+1) Array object
+2) String object
+3) Date
+4) Math
+5) document
+6) window
+7) location
+8) navigator
+9) history
+10) screen
