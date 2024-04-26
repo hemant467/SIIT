@@ -1,0 +1,129 @@
+Frames
+======================================
+. used to display multiple html files in a single web page
+. <frameset>
+===================
+. used to divide page into multiple parts
+. syntax: <frameset rows/cols="" />
+. ex:1
+index.html
+====================
+<html>
+  <head>
+    <title>Example for frames </title>
+  </head>
+  <frameset cols="50%,50%" border=10 bordercolor="black" >
+    <frame src="1.html" name="f1" NORESIZE/>
+    <frame src="2.html" name="f2" NORESIZE/>
+  </frameset>
+</html>
+
+1.html
+===================
+<!DOCTYPE html>
+<html lang="en">
+ <body bgcolor="red" text="Yellow">
+  <h1><Center>1.html</center></h1>
+ </body>
+</html>
+
+2.html
+=================
+<!DOCTYPE html>
+<html lang="en">
+ <body bgcolor="blue" text="white">
+  <h1><Center>2.html</center></h1>
+ </body>
+</html>
+
+
+ex-2:
+=======
+<html>
+  <head>
+    <title>Example for frames </title>
+  </head>
+  <frameset rows="30%,*" border=0>
+     <frame src="1.html" name="f1" />
+	 <frameset cols="30%,40%,*">
+	   <frame src="2.html"  name="f2" />
+	   <frame src="first.html" name="f3" scrolling="no"/>
+	   <frame src="second.html" name="f4" scrolling="yes"/>
+	 </frameset>
+  </frameset>
+</html>
+
+ex-3:
+=================
+<html>
+  <head>
+    <title>Example for frames </title>
+  </head>
+  <frameset cols="30%,*" border=0%>
+     <frame src="1.html" name="f1" />
+	 <frameset rows="20%,50%,30%" >
+	    <frame src="2.html"  name="f2" />
+		<frame src="first.html" name="f3" scrolling="no"/>
+		<frame src="second.html" name="f4" />
+	 </frameset>
+  </frameset>
+</html>
+
+ex-4:
+==============
+<html>
+  <head>
+    <title>Example for frames </title>
+  </head>
+  <frameset rows="30%,50%,*" >
+    <frame src="1.html" name="f1" />
+	<frameset cols="50%,20%,*">
+	  <frame src="2.html" name="f2" />
+	  <frame src="3.html" name="f3" />
+	  <frame src="4.html" name="f4" />
+	</frameset>
+	<frame src="5.html" name="f5" />
+  </frameset>
+</html>
+
+
+.ex-5
+=================
+index.html
+===========
+<html>
+  <head>
+    <title>Example for frames </title>
+  </head>
+  <frameset cols="15%,*" border=0>
+    <frame src="links.html" name="f1" />
+	<frame name="f2"/>
+  </frameset>
+</html>
+
+links.html
+================
+<html>
+ <body>
+   <h1 align="center">
+   <a href="1.html" target="f2">C</a><br>
+   <a href="2.html" target="f2">C++</a><br>
+   <a href="first.html" target="f2">JAVA</a><br>
+   <a href="second.html" target="f2"> .NET</a><br>
+   </h1>
+ </body>
+</html>
+
+
+task1.html
+====================
+index.html  (division)
+header.html (b/g image, center aligned text (project title))
+links.html  (hyper links horizontaly)
+links1.html (hyper links veritcaly)
+welcome.html(one Image and some text about your web site)
+latest.html (add two images and apply marquee effect)
+footer.html (copyright@2023, designed by Shraddha)
+contact.html
+about.html
+login.html
