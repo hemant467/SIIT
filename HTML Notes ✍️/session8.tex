@@ -1,0 +1,156 @@
+Entities
+======================================
+.Entity is a special symbol
+.every entity starts with '&' and ends with ';'.
+. syntax:
+==========
+   &entityname;
+   &#asciicode;
+  
+. Entity 
+ ---------
+  &lt;  <
+  &gt;  >
+  &amp; &
+  &copy; copyright symbol
+  &trade; trade mark symbol
+  &reg; registered trade mark symbol
+  &nbsp; no back space
+ex:
+======
+<html>
+  <body>
+    <h1>
+	&lt;Hello &gt; <Br>
+	&amp;<br >
+	&copy;
+	&trade;
+	&reg;<br >
+	&euro; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&yen;
+  <body>
+</html>
+
+CSS 
+==========================================
+. CSS stands for Cascading Style Sheets.
+. CSS defines the structure of html document.
+. CSS is to seperate presentation logic(Attributes) with application logic(html tags).
+. syntax:
+ ----------
+    selector1,selector2,...
+    {
+      name:value; (properties)
+      name:value;
+      name:value;
+    }
+ex:
+=====
+    h1,p
+    {
+      font-size:100px;
+      text-align:center;
+      ....
+    }
+Note:
+===========
+. selectors are nothing but html tags
+. properties are nothinb but attributes
+. all properties must be enclosed between left and right braces
+. every property contains name and value
+. two properties are seperated with semicolan(;)
+
+. Style sheets are of three types.
+  1) Internal style sheets
+  2) External style sheets
+  3) Embedded style sheets
+
+1) Internal style sheets
+===========================================================
+. We include html code and css code in a single document
+. file extension should be .html
+. suitable for one web page
+. syntax:
+==========
+  <html>
+     <style>
+     </style>
+     <body>
+     </body>
+  </html>
+.ex:
+======
+<html>
+  <head>
+    <style>
+	  body
+	  {
+	    background-color:red;
+		background-image:url("image1.jpg");
+	  }
+	  h1
+	  {
+	    font-size:100px;
+		text-align:center;
+		color:blue;
+		background-color:black;
+		background-image:url("image2.jpg");
+	  }
+	  p
+	  {
+	    color:red;font-size:60px;background-color:white;
+	  }
+	  h2
+	  {
+	   color:magenta;text-align:center;font-size:100px;
+	  }
+	</style>
+  </head>
+  <body>
+     <h1>Welcome to CSS</h1>
+	 <p>Paragraph tag</p>	
+	 <h2>Example for Internal Style Sheets</h2>
+  <body>
+</html>
+
+External Style sheets
+=====================================================
+. we define seperate .html and .css files
+. suitable for one web application(i.e. collection of web pages)
+. External style sheets are much reusable than internal style sheets.
+
+. style.css
+=====================
+	 body
+	  {
+	    background-color:red;
+		background-image:url("image1.jpg");
+	  }
+	  h1
+	  {
+	    font-size:100px;
+		text-align:center;
+		color:blue;
+		background-color:black;
+		background-image:url("image2.jpg");
+	  }
+	  p
+	  {
+	    color:red;font-size:60px;background-color:white;
+	  }
+	  h2
+	  {
+	   color:magenta;text-align:center;font-size:100px;
+	  }
+
+index.html
+====================
+<html>
+  <head>
+    <link rel="StyleSheet" href="style.css" />
+  </head>
+  <body>
+     <h1>Welcome to CSS</h1>
+	 <p>Paragraph tag</p>	
+	 <h2>Example for Internal Style Sheets</h2>
+  <body>
+</html>
