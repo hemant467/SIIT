@@ -1,0 +1,125 @@
+Math object
+============================================
+. Used to perform mathematical operations
+. ex:
+=======
+<html>
+    <font size=6>
+     <script>      
+	   document.writeln("<br>",Math.E);
+	   document.writeln("<br>",Math.PI);
+	   document.writeln("<br>",Math.sqrt(25));//square root
+	   document.writeln("<br>",Math.cbrt(125));//cube root
+	   document.writeln("<br>",Math.pow(2,3));//power(2,3)
+	   document.writeln("<br>",Math.log(10));//logx base e
+	   document.writeln("<br>",Math.log10(10));//logx base 10
+	   document.writeln("<br>",Math.exp(1));//e power(1)
+	   //ceil(x): rounded up to nearest integer
+	   document.writeln("<br>",Math.ceil(3.4));
+	   //floor(x): rounded down to nearest integer
+	   document.writeln("<br>",Math.floor(3.4));
+	   //round(x): rounded to nearest integer
+	   document.writeln("<br>",Math.round(3.3));
+	   document.writeln("<br>",Math.round(3.6));
+	   //random(x): generates random number between 0.0 to 1.0
+	   document.writeln("<br>",Math.random());
+	   //sin(x),cos(x),tan(x) but x must be in radians
+	   document.writeln("<br>",Math.sin(30*3.14/180));
+	</script>
+   </font>
+  <body>
+</html>
+
+document object
+=============================================
+variables
+=========
+1)bgColor = background color
+2)fgColor = foreground color
+3)lastModified
+
+ex:
+========
+<html>
+    <font size=6>
+     <script>      
+	   document.bgColor = "cyan";
+	   document.fgColor = "red";
+	   document.writeln("Welcome to document object");
+	   document.writeln("<br>",document.lastModified);
+	</script>
+   </font>
+  <body>
+</html>
+
+document object functions
+========================================
+1) writeln(): to display text on output
+2) getElementById()
+3) getElemnetByClass()
+
+Form Validations
+==========================
+.syntax:  document.formname.elementname.value
+
+.ex-1: WAP to find area of square (a=s*s)
+==========================================
+<html>
+    <head>
+	   <script>
+	      function calculate()
+		  {
+				var a=document.f1.side.value;//string data type
+				var side = parseInt(a);
+				var area = side*side;
+				document.writeln("<h1>",area);
+		  }
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1">
+	   Enter Side = <input type="text" name="side" /><br>
+	   <input type="button" value="calulate" onclick="calculate()" />
+	 </form>
+   </font>
+  <body>
+</html>
+
+.ex-2: WAP to add two numbers
+=================================================
+<html>
+    <head>
+	   <script>
+	      function add()
+		  {
+				var a = document.f1.first.value
+				var b = document.f1.second.value
+				var c=parseInt(a)
+				var d=parseInt(b)
+				document.writeln("<h1>",c+d);
+		  }
+		  function sub()
+		  {
+				var a = document.f1.first.value
+				var b = document.f1.second.value
+				var c=parseInt(a)
+				var d=parseInt(b)
+				document.writeln("<h1>",c-d);
+		  }
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1">
+	  Enter first number:<input type="text" name="first" /><br>
+	  Enter second number:<input type="text" name="second"/><br><br><br>
+	  <input type="button" value="add" onclick="add()" />
+	  <input type="button" value="sub" onclick="sub()" />
+	 </form>
+   </font>
+  <body>
+</html>
+
+. WAP to find area of rectangle
+. WAP to find average of 5 numbers
+. WAP to display numbers from 1 to n
+
