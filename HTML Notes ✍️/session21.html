@@ -1,0 +1,283 @@
+getElementById()
+=================================================
+.syntax: document.getElementById("idname").value
+. ex-1:
+=========
+<html>
+    <head>
+	   <script>
+	      function add()
+		  {
+				var a = document.getElementById("first").value
+				var b = document.getElementById("second").value
+				var c=parseInt(a)
+				var d=parseInt(b)
+				document.writeln("<h1>",c+d);
+		  }
+		  function sub()
+		  {
+				var a = document.getElementById("first").value
+				var b = document.getElementById("second").value
+				var c=parseInt(a)
+				var d=parseInt(b)
+				document.writeln("<h1>",c-d);
+		  }
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1">
+	  Enter first number:<input type="text" id="first" /><br>
+	  Enter second number:<input type="text" id="second"/><br><br><br>
+	  <input type="button" value="add" onclick="add()" />
+	  <input type="button" value="sub" onclick="sub()" />
+	 </form>
+   </font>
+  <body>
+</html>
+
+Form validation using getElementById("id)"
+===========================================================
+. WAP to display date on output and referesh in every one second
+======================================================================
+<html>
+    <head>
+	   <script>
+	     function display()
+		 {
+			 var d=new Date();
+			 //document.f1.txt.value = d;
+			 document.getElementById("txt").value = d;
+		 }
+		 setInterval("display()",1000);
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1">
+	    <input type="text" id="txt" size=40 name="txt"/>
+		<input type="button" value="Click here" onclick="display()" />
+	 </form>
+	
+   </font>
+  <body>
+</html>
+
+Event Handling
+=============================================
+. Change in current is called as an Event
+. To handle events there is a mechanism called Event handling mechanism
+. Events
+==========
+ 1) onclick
+ 2) onSubmit
+ 3) onChange
+ 4) onFocus
+ 5) onBlur
+ 6) onLoad
+ 7) MouseEvents
+  =================
+     onMouseOver
+     onMouseOut
+     onMouseDown
+     onMouseUp
+
+ 8) KeyEvents
+ ==================
+     onKeyPress
+     onKeyDown
+     onKeyUp
+
+onClick
+========================
+. This event is raised whenever we click on button or hyperlink or some tag..
+. ex:
+=======
+<html>
+    <head>
+	   <script>
+	     function google()
+		 {
+			 window.location = "http://www.google.com";
+		 }
+		 function facebook()
+		 {
+			 window.location = "http://www.facebook.com";
+		 }
+		 function gmail()
+		 {
+			 window.location = "http://www.gmail.com";
+		 }
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1">
+	    <input type="button" value="Google" onClick="google()"/>
+		<input type="button" value="FaceBook" onClick="facebook()"/>
+		<input type="button" value="Gmail" onClick="gmail()"/>
+	 </form>
+	
+   </font>
+  <body>
+</html>
+
+(or)
+<html>
+    <head>
+	   <script>
+	     function display(url)
+		 {
+			 window.location = url;
+		 }
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1">
+<input type="button" value="Google" onClick="display('http://www.google.com')"/>
+<input type="button" value="FaceBook" onClick="display('http://www.facebook.com')" />
+<input type="button" value="Gmail" onClick="display('http://www.gmail.com')"/>
+	 </form>
+	
+   </font>
+  <body>
+</html>
+
+onSubmit
+==================================================================
+. this will occur whenever we click on submit button
+. Login page validation
+================================
+<html>
+    <head>
+	   <script>
+	     function validate()
+		 {
+			 if(document.getElementById("user").value == '')
+			 {
+				 alert("Please enter user name");
+				 return false;
+			}
+			else if(document.getElementById("pwd").value == '')
+			{
+				alert("Please enter password");
+				return false;
+			}
+		 }
+	   </script>
+	</head>
+    <font size=6>
+     <form name="f1" onSubmit="return validate()" action="http://google.com">
+	  UserName: <input type="text" name="user" id="user"/><br>
+	  Password: <input type="password" name="pwd" id="pwd"/><br>
+	  <input type="submit" value="submit" />
+	  <input type="reset" value="reset" />
+	 </form>
+	
+   </font>
+  <body>
+</html>
+
+. Registration page validation
+==================================
+fields: name, firstname, lastname, username, password, emailid, mobilenumber
+
+
+3) onChange event
+=============================================
+. This event will raise whenever we transfer request from one filed to another
+. ex:
+=======
+<html>
+    <head>
+	   <script>
+	    function name1()
+		{
+			name = document.getElementById("name").value;
+  		    alert("Your Name="+name);
+		}
+		function age1(){
+			age = document.getElementById("age").value;
+			alert("Your Age="+age);
+		}
+	   </script>
+	</head>
+    <font size=6>
+    <form>
+	  Name : <input type="text" id="name" onChange="name1()" /><br>
+	  Age  : <input type="text" id="age" onChange="age1()" /><br>
+	  <input type="submit" value="submit" />
+	</form>
+	
+   </font>
+  <body>
+</html>
+
+example-2
+==========================
+<html>
+    <head>
+	   <script>
+	    function display()
+		{
+			var url = document.getElementById("s").value
+			window.location = url;
+		}
+	   </script>
+	</head>
+    <font size=6>
+    <form>
+	  
+	   <select name="s" id="s" onChange="display()">
+	      <option value="http://www.google.com">Google
+		  <option value="http://www.facebook.com">Facebook
+		  <option value="http://www.gmail.com">Gmail
+	   </select>
+	  
+	</form>
+	
+   </font>
+  <body>
+</html>
+
+onFocus and onBlur
+=================================
+index.html
+============
+<frameset cols="50%,*">
+  <frame src="1.html" name="f1" />
+  <frame src="2.html" name="f2" />
+</frameset>
+
+1.html
+==========
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    function green(){
+		document.bgColor = "green";
+	}
+	function pink(){
+		document.bgColor = "pink";
+	}
+  </script>
+ <body bgcolor="red" text="Yellow" onFocus="green()" onBlur="pink()">
+  <h1><Center>1.html</center></h1>
+ </body>
+</html>
+
+2.html
+==========
+<!DOCTYPE html>
+<html lang="en">
+ <script>
+    function green(){
+		document.bgColor = "green";
+	}
+	function pink(){
+		document.bgColor = "pink";
+	}
+  </script>
+ <body bgcolor="red" text="Yellow" onFocus="green()" onBlur="pink()">
+  <h1><Center>2.html</center></h1>
+ </body>
+</html>
+
+
