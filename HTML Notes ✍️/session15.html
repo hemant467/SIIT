@@ -1,0 +1,305 @@
+. WAP to find average of 5 subjects?
+  if avg>=70 : distinction
+  if avg<70 and avg>=60 : first class
+  if avg<60 and avg>=50 : second class
+  if avg<50 : fail
+============================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var a=parseInt(prompt("Enter a:"));
+		var b=parseInt(prompt("Enter b:"));
+		var c=parseInt(prompt("Enter c:"));
+		var d=parseInt(prompt("Enter d:"));
+		var e=parseInt(prompt("Enter e:"));
+		var avg = (a+b+c+d+e)/5;
+		if(avg >= 70)
+		   document.writeln("Distinction");
+		else if(avg >= 60)
+		   document.writeln("First class");
+		else if(avg >= 50)
+		   document.writeln("Second class");
+		else
+		   document.writeln("fail");
+	</script>
+   </font>
+  <body>
+</html>
+
+. WAP for travel agency?
+  total = distance * charge
+  1)Male
+     .child : 0.5$/mile
+     .adult : 1$/mile
+  2)Female
+     .child : 0.5$/mile
+     .adult : 0.9$/mile
+  3)PH : 0.3$/mile
+  4)Others: 0$/mile
+------------------------------------------------------------------
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		distance = parseInt(prompt("Enter distance in miles: "))
+		charge = 0
+		choice = parseInt(prompt("Enter 1 for male, 2 for female, 3 for ph, 4 for others"))
+		if(choice == 1)
+		{
+			age = parseInt(prompt("enter age: "))
+			if(age<12)
+			   charge = 0.5;
+			else
+			   charge = 1;
+		}
+		else if(choice == 2)
+		{
+			age = parseInt(prompt("Enter age: "))
+			if(age<12)
+			   charge = 0.5;
+			else
+			   charge = 0.9;
+		}
+		else if(choice == 3)
+		{
+			  charge = 0.3;
+		}
+		else
+		{
+			charge = 0;
+		}
+		total = distance * charge;
+		document.writeln(total);
+	</script>
+   </font>
+  <body>
+</html>
+
+. mileage = 15miles/liter (default)
+  bad roads : mileage-2
+  up hill   : mileage-2.5
+  down hill : mileage+1
+  winter    : mileage-3
+  summer    : milage-1.5
+. distance = fuel * mileage
+=========================================
+input:
+======
+fuel: 100
+bad roads: 
+output:1300 miles
+
+fuel: 100
+down hill
+output: 1600 miles
+==================================================================================
+
+Loop control statements
+==================================
+. also called Iterative/Repetative control statements
+. 1) while
+  2) do-while
+  3) for loop
+
+while loop
+==============
+syntax:
+--------
+initialization;
+while(condition)
+{
+  .....
+  .....
+  increment/decrement
+}
+
+.ex:
+======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	    var i=1;
+		while(i<=100)
+		{
+			document.writeln("Welcome to JS<br>");
+			i++;
+		}
+	</script>
+   </font>
+  <body>
+</html>
+
+.ex-2:WAP to display numbers from 10 to 100
+================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	    var i=10;
+		while(i<=100)
+		{
+			document.writeln(i);
+			i++;
+		}
+		//WAP to display numbers from 99 to 10
+		var j=99;
+		while(j>=10)
+		{
+			document.writeln(j);
+			j--;
+		}
+	</script>
+   </font>
+  <body>
+</html>
+
+.WAP to print first n-natural numbers?
+   1 2 3 4 5....n
+=======================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	    var n=parseInt(prompt("enter n: "))
+		var i=1;
+		while(i<=n)
+		{
+			 document.writeln(i);
+			 i++;
+		}
+	</script>
+   </font>
+  <body>
+</html>
+
+do-while
+============================
+syntax:
+========
+initialization;
+do
+{
+  ....
+  ....
+  incr/decr
+}while(condition);
+
+ex-1:
+=============
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	    //display numbers from 1 to 100
+		var i=1;
+		do
+		{
+			document.writeln(i);
+			i++;
+		}while (i<=100);
+	</script>
+   </font>
+  <body>
+</html>
+
+for loop
+=======================
+syntax:
+--------
+for(initialisation; condition; increment or decrement)
+{
+ ....
+ ....
+}
+
+ex-1: WAP to display numbers from 1 to 100
+==================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	    for(var i=1;i<=100;i++)
+		{
+			document.writeln(i);
+		}
+
+		//100 to 1
+		for(var j=100;j>=1;j--)
+		   document.writeln(j);
+	</script>
+   </font>
+  <body>
+</html>
+
+ex-2: WAP to find GCD/HCF of two +ve numbers?
+=======================================================
+a=35 : 1 5 7 35
+b=15 : 1 3 5 15
+
+a	b
+---	---
+35	15 
+20	15
+5	15
+5	10
+5	5
+
+ex:
+======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	   var a=parseInt(prompt("Enter a: "))
+	   var b=parseInt(prompt("enter b: "))
+	   for( ; a!=b ; )
+	   {
+		   if(a>b)
+		     a=a-b;
+		   else
+		     b=b-a;
+	   }
+	   document.writeln(a);
+	</script>
+   </font>
+  <body>
+</html>
+
+. WAP to find factorial of a given number
+. WAP to print multiplication table
+
+<script>
+  var n=parseInt(prompt("enter n: "))
+  var fact=1;
+  for(var i=1;i<=n;i++)
+  {
+    fact = fact * i;
+  }
+  document.writeln(fact);
+</script>
