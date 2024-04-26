@@ -1,0 +1,227 @@
+. WAP to add two numbers 10 and 20
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		a=10;
+		b=20;
+		c=a+b;
+		document.writeln(c);
+	 </script>
+	</font>
+  <body>
+</html>
+
+2) WAP to find area of rectangle of l=34cm and b=45cm
+   formula : a=l*b
+ ex:
+ =======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	    l=34;
+		b=45;
+		a=l*b;
+		document.writeln(a);
+	 </script>
+	</font>
+  <body>
+</html>
+
+3) WAP to find area of sqaure of side 100cm(area = side * side)
+4) WAP to find area of circle of radius 3.45cm (a=3.14*r*r)
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+	   r=3.45;
+	   a=3.14*r*r;
+	   document.writeln(a)
+	 </script>
+	</font>
+  <body>
+</html>
+
+5)WAP to find area of tringle of b=3.45cm and h=5.6cm(a=0.5*b*h)
+
+Dialog boxes
+==========================================
+1) Alert box
+2) Confirm box
+3) Prompt box
+
+alert box
+=============================
+. used to display warning messages
+. syntax: alert("message")
+. ex:
+=======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		alert("Welcome to Java Script");
+		
+		a=100;
+		b=200;
+		c=a+b;
+		alert(c);
+		
+		document.writeln("After alert box");
+	</script>
+   </font>
+  <body>
+</html>
+
+Confirm box
+=======================================
+syntax: confirm("message");
+. If user selects ok button then it returns true else returns false.
+. ex:
+=======
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		var res = confirm("Do you want to continue");
+		document.writeln(res);
+		if(res == true)
+		{
+			window.location = "http://www.google.com";
+	    }
+	</script>
+   </font>
+  <body>
+</html>
+
+parseInt(): converts string to integer
+parseFloat(): converts string to float
+=====================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		a="10";
+		b="20";
+		document.writeln(a+b);//Concatenation(appending one string to another)
+		//document.writeln("Hello"+"How are you");
+		c=parseInt(a);
+		d=parseInt(b);
+		document.writeln(c+d);
+
+		e="10.5";
+		f="45.67";
+		document.writeln(e+f);
+		g=parseFloat(e);
+		h=parseFloat(f);
+		document.writeln(g+h);
+	</script>
+   </font>
+  <body>
+</html>
+
+3)Prompt box
+============================================================
+. Used to read input from user
+. prompt() always returns string data type so type casting is required
+. Converting one data type to another data type is called type casting.
+. ex-1: WAP to add two numbers?
+========================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		a = prompt("enter a: ");
+		b = prompt("Enter b: ");
+		c = parseInt(a);
+		d = parseInt(b);
+		document.writeln(c+d);
+	</script>
+   </font>
+  <body>
+</html>
+
+(or)
+
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		a = parseInt(prompt("enter a: "));
+		b = parseInt(prompt("Enter b: "));
+		document.writeln(a+b);		
+	</script>
+   </font>
+  <body>
+</html>
+
+2) WAP to find area of rectangle(a=l*b)
+===============================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		l=parseInt(prompt("enter l: "));
+		b=parseInt(prompt("enter b: "));
+		a=l*b;
+		document.writeln(a);
+	</script>
+   </font>
+  <body>
+</html>
+
+3) WAP to find area of circle(a=3.14*r*r)
+======================================================
+<html>
+  <head>
+   <title>WElcome to JS</title>
+  </head>
+  <body>
+    <font size=7>
+     <script>
+		r=parseFloat(prompt("Enter radius: "));
+		a=3.14*r*r;
+		document.writeln(a);
+	</script>
+   </font>
+  <body>
+</html>
+
+4) WAP to find area of traingle(a=0.5*b*h)
+5) WAP for simple interest(si=p*t*r/100)
+6) WAP to find average of 5 numbers(avg=(a+b+c+d+e)/5)
+
+
+Control Statements
+=================================================
+please check chat message
+can you hear me
+give me 2 mins , i will restart session ok
