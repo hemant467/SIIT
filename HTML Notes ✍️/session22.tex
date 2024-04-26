@@ -1,0 +1,186 @@
+Mouse events
+====================================
+onMouseOver
+onMouseOut
+onMouseDown
+onMouseUp
+
+ex-1:
+======
+<html>
+    <head>
+	   <script>
+	      function red()
+		  {
+			  document.getElementById("txt").style.color="red";
+			  document.getElementById("txt").style.fontSize=100;
+		  }
+		  function black()
+		  {
+			  document.getElementById("txt").style.color = "black";
+			  document.getElementById("txt").style.fontSize=50;
+		  }
+		  function pink()
+		  {
+			  document.getElementById("txt").style.color = "pink";
+		  }
+	   </script>
+	</head>
+    <font size=6>
+   <h1 onMouseOver="red()" onMouseOut="black()" id="txt"  onMouseDown="pink()">
+	 Welcome to Mouse Events
+	 </h1>
+   </font>
+  <body>
+</html>
+
+ex-2:
+=========
+<html>
+    <head>
+	   <script>
+	      function over()
+		  {
+			  document.getElementById("txt").style.src = "image1.jpg";
+			  document.getElementById("txt").style.width=300;
+			  document.getElementById("txt").style.height=300;
+		  }
+		  function out()
+		  {
+			  document.getElementById("txt").style.width=100;
+			  document.getElementById("txt").style.height=100;
+		  }
+	   </script>
+	</head>
+    <font size=6>
+   <img src="bg.jpg" onMouseOver="over()" onMouseOut="out()" id="txt"  width=100 height=100 />
+	
+	 </h1>
+   </font>
+  <body>
+</html>
+
+KeyEvents
+====================
+onKeyPress (down+up)
+onKeyDown
+onKeyUp
+ex:
+=====
+<html>
+    <head>
+	   <script>
+	     function validate()
+		 {
+			 var a=document.getElementById("mobile").value
+			 if(isNaN(a) && a.length != 10) //NaN-Not a number
+			 {
+				 alert("Please enter correct mobile number");
+			 }
+		 }
+	   </script>
+	</head>
+    <font size=6>
+    <form>
+     Mobile Number:<input type="text" id="mobile" onKeyPress="validate()">
+	</form>
+	
+	 </h1>
+   </font>
+  <body>
+</html>
+
+innerHTML and innerText
+============================================================
+. innerHTML and innerText are java script variables
+. innerHTML and innerText are used to change the text on the browser without reloading entire page
+. ex:
+======
+<html>
+    <head>
+	   <script>
+	     function add()
+		 {
+			 var a=parseInt(document.getElementById("first").value)
+			 var b=parseInt(document.getElementById("second").value)
+			 var c=a+b;
+			 document.getElementById("result").innerText = c;
+		 }
+		 function mul()
+		 {
+			 var a=parseInt(document.getElementById("first").value)
+			 var b=parseInt(document.getElementById("second").value)
+			 var c=a*b;
+			 document.getElementById("result").innerText=c;
+		}
+	   </script>
+	</head>
+	<body>
+	<div>
+    <font size=6>
+    <form>
+      First Number:<input type="text" id="first" /><br>
+	  Second Number:<input type="text" id="second" /><br>
+	  <input type="button" value="Add" onclick="add()" />
+	  <input type="button" value="MUL" onclick="mul()" />
+	</form>
+   </font>
+   </div>
+   <div>
+     <h1 id="result">See The Results Here</h1>
+   </div>
+  <body>
+</html>
+
+ex-2:
+===========
+<html>
+    <head>
+	   <script>
+	     function change()
+		 {
+document.getElementById("txt").innerHTML="<font color=red>Hello, Welcome to DHTML</font>";
+		 }
+	   </script>
+	</head>
+	<body>
+	<div>
+      <h1 onclick="change()" id="txt">Click here to change text</h1>
+   </div>
+  <body>
+</html>
+
+ex-3:
+=========
+<html>
+    <head>
+	   <script>
+	     function validate()
+		 {
+			var a=document.getElementById("pwd").value
+			if(a.length<=4)
+			  document.getElementById("result").innerText="Weak Password";
+			 else if(a.length <= 8)
+			   document.getElementById("result").innerText="Average Password";
+			 else if(a.length>=9)
+			   document.getElementById("result").innerText="Strong Password";
+		 }
+	   </script>
+	</head>
+	<body>
+	<div>
+     <form>
+	    PasswordField :<input type="password" id="pwd" onkeypress="validate()">
+	 </form>
+   </div>
+   <div>
+      <h1 id="result"></h1>
+   </div>
+  <body>
+</html>
+
+window
+location
+navigator
+histroy
+screen
