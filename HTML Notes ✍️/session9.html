@@ -1,0 +1,175 @@
+Embedded/inline style sheets
+================================================
+. are used to apply styles for individual tags
+. ex:
+======
+<html>
+  <head>
+    
+  </head>
+  <body>
+     <h1 style="font-size:60px;color:red;background-color:black;">Welcome to Inline style sheets</h1>
+	 <p style="font-size:100px;text-align:center;color:magenta;">Paragraph tag</p>
+  <body>
+</html>
+
+Background properties
+=============================================
+background-color: name/#value/rgb(-,-,-)
+background-image: url("path")
+background-repeat: repeat/no-repeat/repeat-x/repeat-y
+background-position: left/center/right/top/bottom
+background-attachment: scroll/fixed
+ex:
+=========
+<html>
+  <head>
+    <style>
+	  body
+	  {
+		background-color:rgb(100,150,50);
+		background-image:url("image2.jpg");
+		background-repeat:no-repeat;
+		background-position:top center;
+		background-attachment:fixed;
+	  }
+	</style>
+  </head>
+  <body>
+     <h1>Welcome to CSS</h1>
+  <body>
+</html>
+
+hyperlink properties
+=================================================
+a:link - initial color
+a:vlink - visited link
+a:alink - active link
+a:hover - mouse over
+
+ex:
+========
+<html>
+  <head>
+    <style>
+	 a
+	 {
+	  font-size:50px;text-decoration:none;
+	 }
+	 a:link {color:red;}
+	 a:visited {color:black;}
+	 a:active {color:pink}
+	 a:hover {font-size:100px;color:magenta;}
+	</style>
+  </head>
+  <body>
+     <h1>
+		<a href="http://www.cricinfo.com">Cricket Scores</a>
+     </h1>
+  <body>
+</html>
+
+
+List properties
+=============================
+list-style-type : none/number/lower-alpha/upper-alpha/lower-roman/upper-roman/circle/square/disc
+list-style-image: url("path")
+.ex:
+=========
+<html>
+  <head>
+    <style>
+	 ol{font-size:50px;}
+	 li
+	 {
+	  list-style-type:square;
+	  list-style-image:url("image2.jpg");
+	 }
+	</style>
+  </head>
+  <body>
+     <ol>
+	   <li>C
+	   <li>Java
+	   <li>.Net
+	   <li>Python
+	 </ol>
+  <body>
+</html>
+
+table properties
+============================================
+border: bordersize color solid/dotted/dahsed
+width:
+height:
+border-collapse:collapse(single line border)
+border-bottom: only bottom borders
+text-align: left/center/right(Horizontal alignment)
+vertical-align: top/center/bottom
+padding: gap b/w cell and text
+hover: mouse over
+nth-child(rowno): 
+ex:
+=====
+<html>
+  <head>
+    <style>
+	table
+	{
+	  border:3px red dotted;
+	  width:50%; 
+	  height:30%;
+	  border-collapse:collapse;
+	}
+	tr,th
+	 {
+	 border-bottom:3px red solid;
+	 text-align:left;
+	 vertical-align:bottom;
+	 padding:20px;
+	 }
+	 tr:hover {background-color:yellow;}
+	 tr:nth-child(1){background-image:url("image2.jpg");}
+	 tr:nth-child(even){background-color:grey;}
+	</style>
+  </head>
+  <body>
+    <table>
+	  <tr>
+	    <th>Course Name</th>
+		<th>Couse Fee</th>
+		<th>Duration</th>
+	  </tr>
+	  <tr>
+	    <th>Java</th>
+		<th>150</th>
+		<th>35 days</th>
+      </tr>
+	  <tr>
+	    <th>Python</th>
+		<th>250</th>
+		<th>55 days</th>
+      </tr>
+	  <tr>
+	    <th>Course Name</th>
+		<th>Couse Fee</th>
+		<th>Duration</th>
+	  </tr>
+	  <tr>
+	    <th>Java</th>
+		<th>150</th>
+		<th>35 days</th>
+      </tr>
+	  <tr>
+	    <th>Python</th>
+		<th>250</th>
+		<th>55 days</th>
+      </tr>
+	</table>
+  <body>
+</html>
+
+font properties
+text properties
+border properties
+margin properties
