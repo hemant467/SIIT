@@ -1,0 +1,95 @@
+window object
+=======================
+ Methods:
+ ----------
+	1) alert()
+	2) confirm()
+	3) prompt()
+	4) open()
+	5) close()
+	6) moveTo(x-pos,y-pos)
+ex-1:
+=========
+<html>
+    <head>
+	   <script>
+	     function disp()
+		 {
+			window.alert("Welcome to Window object");
+			window.confirm("Do you want to continue");
+			name = window.prompt("Enter name: ");
+			document.writeln(name);
+		 }
+	   </script>
+	</head>
+	<body onLoad="disp()">
+	<body>
+</html>
+
+open()
+=============================================
+. It opens a new window(pop ups)
+. syntax: open("file name","logical name","properties")
+. ex:
+======
+<html>
+    <head>
+	   <script>
+	     function disp()
+		 {
+			a=window.open("1.html","one",			"width=300,height=300,status=1,resizable=1,menubar=1");	
+			a.moveTo(200,300);
+			a.close()
+		 }
+	   </script>
+	</head>
+	<body onLoad="disp()">
+	   <h1>Welcome to Window Pop ups</h1>
+	<body>
+</html>
+
+location object
+======================================
+. Used to forward request from one page to another page
+. It is a sub object(child object) of window object
+.ex:
+=======
+<html>
+    <head>
+	   <script>
+	    function google()
+		{
+			a = confirm("Do you to continue");
+			if(a == true)
+			  window.location = "http://www.google.com";
+		}
+		function facebook()
+		{
+			a = confirm("Do you to continue");
+			if(a == true)
+			  window.location = "http://www.facebook.com";
+		}
+	   </script>
+	</head>
+	<body>
+	   <form>
+	      <input type="button" value="Google" onclick="google() "/>
+		  <input type="button" value="Facebook" onclick="facebook()"/>
+	   </form>
+	<body>
+</html>
+
+
+Q) In html, how many ways are there to forward request from one page to another
+===============================================================================
+  1) href attribute of hyperlinks 
+     <a href="http://goog.com">Google</a>
+  2) action attribute of form tag
+     <form action="http://google.com">
+  3) location object of java script
+
+navigator
+=================================
+. It gives information about a perticular browser and operating system
+. ex:
+======
