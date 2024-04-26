@@ -1,0 +1,88 @@
+Multimedia applications
+=====================================================
+. working with images, audio/video files
+. Images
+========================
+. To display image on output we use <img> .
+. attributes
+ ------------
+  src = "source/filename"
+  width = piexels
+  height = piexels
+  align = left/right/center
+  hspace = Horizontal space
+  vspace = Vertical space
+  alt = alternate text
+
+. ex-1:
+==========
+<html>
+   <head>
+     <title>Example for Multimedia applications</title>
+   </head>
+   <body bgcolor="black" text="ffbb12" background="bg.jpg">
+    <img src="image1.jpg" width="200" height="200" alt="Image not found"/><br>
+    <img src="image2.jpg" width="200" height="200" align="center" hspace=100 vspace=100/><br>
+    <img src="image3.jpg" width="200" height="200"/>
+   </body>
+</html>
+
+<embed> tag
+==================================================
+. <embed> is a legacy tag(old)
+. syntax:
+========= 
+  <embed src="" width= height= hspace= vspace= alt= />
+. ex:
+=======
+<html>
+   <head>
+     <title>Example for Multimedia applications</title>
+   </head>
+   <body bgcolor="black" text="ffbb12" background="bg.jpg">
+    <embed src="video1.mp4"  width=400 height=200 />
+   </body>
+</html>
+
+<marquee>
+===========================================
+. Used to scroll text/image from left to right or top to bottom
+. attributes:
+================
+  bgcolor = background color
+  width   = piexels
+  height  = piexels
+  hspace  = Horizontal space
+  vspace  = Vertical space
+  direction = left/right/up/down
+  behavior = scroll/slide/alternate
+  loop = number of rotations
+. ex:
+======
+<html>
+   <head>
+     <title>Example for Multimedia applications</title>
+   </head>
+   <body bgcolor="pink">
+   <h1>
+   <marquee bgcolor="blue" width=400 height=400 hspace=50 vspace=50 direction="down" behavior="alternate" loop=3>
+     Welcome to HTML
+   </marquee>
+   <br><br>
+   <marquee>
+     <img src="image2.jpg" width=100 height=100 direction="right"/>
+   </marquee>
+   </h1>
+   </body>
+</html>
+
+Assignment
+====================
+1) Heading : project title
+2) video file
+3) Audio file
+4) Description 
+
+. Hyper links
+. Formatting tags
+. frames concept
