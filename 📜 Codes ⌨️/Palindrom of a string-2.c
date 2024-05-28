@@ -5,6 +5,7 @@ int main()
 	int i,length=0,flag=0;
 	
 	do{
+		flag=0;
 		printf("Enter a string: ");
 		scanf("%s",str);
 		
@@ -25,4 +26,5 @@ int main()
 		scanf(" %c",&choice);
 	}
 	while(choice=='y'||choice=='Y');
+	printf("\n\nTHANK YOU :) for running the code\n\n");
 }
