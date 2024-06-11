@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script>
+	  function dis1()
+	   {
+	     document.getElementById("text").style.color="red";
+	     document.getElementById("text").style.fontSize=100;
+	   }
+	  function dis2()
+	   {
+	     document.getElementById("text").style.color="blue";
+	     document.getElementById("text").style.fontSize=200;
+	   }
+	  function dis3()
+	   {
+	     document.getElementById("text").style.color="black";
+	     document.getElementById("text").style.fontSize=300;
+	   }
+	  function dis4()
+	   {
+	     document.getElementById("text").style.color="green";
+	     document.getElementById("text").style.fontSize=400;
+	   }
+     </script>
+</head>
+<body>
+     <h1 id="text" onmouseover="dis1()" onmousedown="dis2()" onmouseup="dis3()">
+	Hello
+     </h1>
+</body>
