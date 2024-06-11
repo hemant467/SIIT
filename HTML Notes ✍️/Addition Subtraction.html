@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script>
+	  function add()
+	   {
+	     var a = parseInt(document.getElementById("a").value);
+	     var b = parseInt(document.getElementById("b").value);
+	     var c = a+b;
+	     document.getElementById("res").innerText=c;
+	   }
+	  function sub()
+	   {
+	     var a = parseInt(document.getElementById("a").value);
+	     var b = parseInt(document.getElementById("b").value);
+	     var c = a-b;
+	     document.getElementById("res").innerText=c;
+	   }
+     </script>
+</head>
+<body>
+     <form>
+       enter a<input type="text" id="a"><br>
+       enter b<input type="text" id="b"><br>
+       <input type="button" value="add" onclick="add()"><br>
+       <input type="button" value="sub" onclick="sub()"><br>
+       <h1  id="res">See result here</h1>
+     </form>
+</body>
